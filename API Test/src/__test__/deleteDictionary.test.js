@@ -1,7 +1,7 @@
 // we will use supertest to test HTTP requests/responses
 import * as request from 'supertest';
 // we also need our app for the correct routes
-import * as app from '../createDictionary';
+import * as app from '../deleteDictionary';
 
 //test to make sure we can validate
 describe('Does it work?', () => {
