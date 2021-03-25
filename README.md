@@ -12,6 +12,7 @@ In this example, we will look at a Dictionary API with simple functionality, sin
     -	Run ‘npm -init’ to create a package.json file
     -	Run ‘npm install jest’ to install our testing framework
     - Run ‘npm install supertest’ to install additional tools for Jest
+    - Run 'npm install axios' to install the axios module for easy http commands
     - Run ‘jest api-test –notify –config=config.json’
 
 **Note: you may have to run ‘node --experimental-vm-modules node_modules/.bin/jest’ if you plan to save the authentication key in a separate file**
@@ -23,6 +24,9 @@ In this example, we will look at a Dictionary API with simple functionality, sin
     - Run the first example (Create a Dictionary)
     - ‘node createDictionary.js’ //or whatever api your testing, check the /src folder for more examples
     - In the terminal you should get back the same result as the Apiary example, but with a new Dictionary ID.
+
+    > Since we are using a module as defined in our package.json file, we cannot use the 'require' method, we have to use 'import. 
+    > More information here: https://www.geeksforgeeks.org/difference-between-node-js-require-and-es6-import-and-export/
 
 ## Testing Parameters
 
