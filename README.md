@@ -25,8 +25,9 @@ In this example, we will look at a Dictionary API with simple functionality, sin
     - ‘node createDictionary.js’ //or whatever api your testing, check the /src folder for more examples
     - In the terminal you should get back the same result as the Apiary example, but with a new Dictionary ID.
 
-    > Since we are using a module as defined in our package.json file, we cannot use the 'require' method, we have to use 'import. 
-    > More information here: https://www.geeksforgeeks.org/difference-between-node-js-require-and-es6-import-and-export/
+> Since we are using a module as defined in our package.json file, we cannot use the 'require' method, we have to use 'import.
+> To run our tests we are going to use the following command: 'NODE_OPTIONS=--experimental-vm-modules npx jest'
+> More information here: https://www.geeksforgeeks.org/difference-between-node-js-require-and-es6-import-and-export/
 
 ## Testing Parameters
 
