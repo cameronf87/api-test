@@ -3,7 +3,7 @@ import {jest} from '@jest/globals';
 // we will use supertest to test HTTP requests/responses
 import * as request from 'supertest';
 // we also need our app for the correct routes
-import * as app from '../deleteDictionary';
+import * as app from '../modifyPair';
 
 //test to make sure we can validate that testing is working
 describe('Does it work?', () => {
@@ -12,14 +12,14 @@ describe('Does it work?', () => {
     })
   })
 
-// Let's check to make sure we do NOT return anything
+// Let's check to make sure we are returning something
 describe('Did the request return anything?', () => {
-    it('Should return false', () => {
+    it('Should return true', () => {
         expect.extend({
             hasID(key, value) {
               return {
                 pass: true,
-                message: () => 'false',
+                message: () => 'true',
               };
             },
           }

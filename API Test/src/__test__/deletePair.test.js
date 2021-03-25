@@ -1,9 +1,11 @@
+//Since our app isn't updating but stil sending a 200 response, we can just verify that we are not receiving an error
+
 // we need to import our modules
 import {jest} from '@jest/globals';
 // we will use supertest to test HTTP requests/responses
 import * as request from 'supertest';
 // we also need our app for the correct routes
-import * as app from '../deleteDictionary';
+import * as app from '../deletePair';
 
 //test to make sure we can validate that testing is working
 describe('Does it work?', () => {
