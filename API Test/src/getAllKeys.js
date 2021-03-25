@@ -3,8 +3,8 @@ import token from '../../private/keys/token.mjs';
 //Import Axios node module
 import axios from 'axios';
 
-//Delete the newly created ID, First add the ID to the end of the URL like this
-axios.delete('https://dictionary.iachieved.it/dictionary/e4d14c27-be87-4b28-aa72-a4a930ed3b30',
+// Supply an ID in the URL to return all key/value pairs for the given object
+axios.get('https://dictionary.iachieved.it/dictionary/e4d14c27-be87-4b28-aa72-a4a930ed3b30/keys',
 {
     headers: {
         'Authorization' : token //change this to the actual token if you did not choose to create a seperate key file
