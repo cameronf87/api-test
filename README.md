@@ -51,21 +51,3 @@ Let’s establish what we are testing for:
 2.	Multi-step workflow with many requests
     - Execute a POST request that creates a resource and returns an auto-generated identifier in its response. We then use this identifier to check if this resource is present in the list of elements received by a GET request. Then we use a PATCH endpoint to update new data, and we again invoke a GET request to validate the new data. Finally, we DELETE that resource and use GET again to verify it no longer exists.
 3.	Repeat for each endpoint
-
-## Run Tests
-
-Create a new Dictionary
-
-    POST /dictionary	
-        - Creates a new dictionary object and returns a dictionary id
-    GET /dictionary	
-        - Should return 404
-
-  - Test 1: Normal behavior
-      - Findings: Output is as expected
-
-  - Test 2: Change POST request to PUT 
-      - Findings: 404 Not Found (expected)
-
-  - Test 3: Make sure the API call returns a new Dictionary ID
-      - Findings: 201 Created and returns dictionary id
