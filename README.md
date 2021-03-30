@@ -3,6 +3,11 @@
 ## In order to work with an API we start by looking through the API documentation, making inferences and expecting certain results. In order to affirm our assumptions, we need to test the abilities of our endpoints. We can think of API’s as a contract between the service and the client, we need to make sure we understand the contract as we would any contract by understanding its abilities and limitations.
 ***
 
+> Since we are using a module as defined in our package.json file, we cannot use the 'require' method, we have to use 'import'.
+
+> To run our tests we are going to use the following command: 'NODE_OPTIONS=--experimental-vm-modules npx jest' to bypass the npm experimental error
+
+> More information here: https://www.geeksforgeeks.org/difference-between-node-js-require-and-es6-import-and-export/
 
 ## Testing Parameters
 
@@ -36,9 +41,7 @@ Let’s establish what we are testing for:
 
 1. Copy the JavaScript examples and save them locally, we will change these later
 2. Set up environment
-
 3. Make sure you have node, npm, axios jest, and supertest npm modules installed
-
 4. Checkout code and save it in a location of your choice
 5. Open terminal
 6. Cd into wherever you saved the project folder
