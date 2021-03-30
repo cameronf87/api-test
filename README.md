@@ -2,28 +2,6 @@
 
 ## In order to work with an API we start by looking through the API documentation, making inferences and expecting certain results. In order to affirm our assumptions, we need to test the abilities of our endpoints. We can think of API’s as a contract between the service and the client, we need to make sure we understand the contract as we would any contract by understanding its abilities and limitations.
 ***
-In this example, we will look at a Dictionary API with simple functionality, since the codebase is small, let’s move it locally so we can set up our testing environment.
-
-1.	Copy the JavaScript examples and save them locally, we will change these later
-2.	Set up environment
-
-    -	Make sure you have git, node, npm, and the axios npm module installed
-    -	Run ‘git -init’ to initialize a new git repo
-    -	Run ‘npm -init’ to create a package.json file
-    -	Run ‘npm install jest’ to install our testing framework
-    - Run ‘npm install supertest’ to install additional tools for Jest
-    - Run 'npm install axios' to install the axios module for easy http commands
-    - Run ‘jest api-test –notify –config=config.json’
-
-**Note: you may have to run ‘node --experimental-vm-modules node_modules/.bin/jest’ if you plan to save the authentication key in a separate file**
-
-3.	Make an API call
-  
-    - Create a private key file for the API key to be stored (somewhat) securely, we will exclude it from our git repository
-    - Add the headers and reference the API key, in node we can use the import/export feature to pass the variable to your app
-    - Run the first example (Create a Dictionary)
-    - ‘node createDictionary.js’ //or whatever api your testing, check the /src folder for more examples
-    - In the terminal you should get back the same result as the Apiary example, but with a new Dictionary ID.
 
 > Since we are using a module as defined in our package.json file, we cannot use the 'require' method, we have to use 'import'.
 
@@ -58,3 +36,30 @@ Let’s establish what we are testing for:
 2.	Multi-step workflow with many requests
     - Execute a POST request that creates a resource and returns an auto-generated identifier in its response. We then use this identifier to check if this resource is present in the list of elements received by a GET request. Then we use a PATCH endpoint to update new data, and we again invoke a GET request to validate the new data. Finally, we DELETE that resource and use GET again to verify it no longer exists.
 3.	Repeat for each endpoint
+
+## Run Tests
+
+1. Copy the JavaScript examples and save them locally, we will change these later
+2. Set up environment
+3. Make sure you have node, npm, axios jest, and supertest npm modules installed
+4. Checkout code and save it in a location of your choice
+5. Open terminal
+6. Cd into wherever you saved the project folder
+7. Create a private folder and to save our authorization token
+    - Type ‘mkdir private’
+    - Cd into the newly created folder
+    - Type ‘mkdir keys’
+    - Type ‘nano token.mjs’
+    - Paste the authorization token, make sure you include ‘basic ‘ before the string
+    - Save by typing CTRL+O then Y then Enter
+    - Cd out 1 levels ‘cd ../‘
+    - Cd into API Test folder
+    - Type ls to see the available files to test
+8. Run each of the .js files that are in the root folder
+    - Use this command “npm createDictionary.js” to run the first API test, this one should just return a dictionary ID
+    - Repeat for each of the .js files in this folder
+9. Run the testing modules
+    - Cd into ‘__test__’
+    - Type ls to list the available files to test
+    - Use this command ‘NODE_OPTIONS=--experimental-vm-modules npx jest createDictionary.test.js’ to test the first module
+    - Repeat for each .js files in this folder
