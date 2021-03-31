@@ -22,15 +22,9 @@ Let’s establish what we are testing for:
   - Negative testing with valid input
   - Negative with invalid input
   - Destructive tests
-  - Security, authorization, permissions, etc.
+  - Security, authorization, permissions, etc. 
 
-## Test Flows
-1.	Simple API requests
-2.	Multi-step workflow with many requests
-    - Execute a POST request that creates a resource and returns an auto-generated identifier in its response. We then use this identifier to check if this resource is present in the list of elements received by a GET request. Then we use a PATCH endpoint to update new data, and we again invoke a GET request to validate the new data. Finally, we DELETE that resource and use GET again to verify it no longer exists.
-3.	Repeat for each endpoint
-
-## Run Tests
+## Run Sample Tests
 
 1. Copy the JavaScript examples and save them locally, we will change these later
 3. Make sure you have node, npm, axios jest, and supertest npm modules installed
