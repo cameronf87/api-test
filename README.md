@@ -33,7 +33,6 @@ Let’s establish what we are testing for:
 ## Run Tests
 
 1. Copy the JavaScript examples and save them locally, we will change these later
-2. Set up environment
 3. Make sure you have node, npm, axios jest, and supertest npm modules installed
 4. Checkout code and save it in a location of your choice
 5. Open terminal
@@ -45,7 +44,7 @@ Let’s establish what we are testing for:
     - Type ‘nano token.mjs’
     - Paste the authorization token, make sure you include ‘basic ‘ before the string
     - Save by typing CTRL+O then Y then Enter
-    - Cd out 1 levels ‘cd ../‘
+    - Cd out 1 level ‘cd ../‘
     - Cd into API Test folder
     - Type ls to see the available files to test
 8. Run each of the .js files that are in the root folder
@@ -55,4 +54,4 @@ Let’s establish what we are testing for:
     - Cd into ‘__test__’
     - Type ls to list the available files to test
     - Use this command ‘NODE_OPTIONS=--experimental-vm-modules npx jest createDictionary.test.js’ to test the first module
-    - Repeat for each .js files in this folder
+    - Repeat for each .js file in this folder
